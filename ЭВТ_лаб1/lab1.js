@@ -11,8 +11,6 @@ do {
 alert('Вы посмотрели ' + numberOfFilms + ' фильмов!');
 alert('Последний просмотренный фильм - ' + lastWatchedFilm);
 alert('Вы оценили его на ' + lastWatchedFilmRate);
-    
-// 4??? not null and not >50
  
 const personalMovieDB = {
     count: numberOfFilms,
