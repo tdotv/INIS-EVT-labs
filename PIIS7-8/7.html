@@ -67,6 +67,10 @@
             drawing = true;
             startX = e.clientX - svg.getBoundingClientRect().left;
             startY = e.clientY - svg.getBoundingClientRect().top;
+            if (currentShape === 'circle'){ 
+                const circle = document.createElementNS("http://www.w3.org/2000/svg", "circle");
+                 svg.appendChild(circle);
+            }
         });
 
         svg.addEventListener('mousemove', (e) => {
@@ -94,14 +98,14 @@
         });
 
         function drawCircle(cx, cy, radius) {
-            const circle = document.createElementNS("http://www.w3.org/2000/svg", "circle");
+           
             circle.setAttribute("cx", cx);
             circle.setAttribute("cy", cy);
             circle.setAttribute("r", radius);
             circle.setAttribute("stroke", lineColorInput.value);
             circle.setAttribute("stroke-width", lineWidthRange.value);
             circle.setAttribute("fill", fillColorInput.value);
-            svg.appendChild(circle);
+           
         }
 
         function drawRectangle(x, y, width, height) {
