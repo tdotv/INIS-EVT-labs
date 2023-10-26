@@ -18,7 +18,7 @@ for (target in targets){
             isDragging = true;
             target.style.zIndex = 1;
         }
-    } };
+    } )};
 
 document.addEventListener("touchmove", (e) => {
     if (isDragging && selectedElement && followMode) {
