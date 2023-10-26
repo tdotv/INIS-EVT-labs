@@ -4,6 +4,7 @@ let isDragging = false;
 let followMode = false;
 
 const targets = document.querySelectorAll(".target");
+for (target in targets){
 
     target.addEventListener("touchstart", (e) => {
         if (!followMode) {
@@ -17,8 +18,7 @@ const targets = document.querySelectorAll(".target");
             isDragging = true;
             target.style.zIndex = 1;
         }
-    });
-});
+    } };
 
 document.addEventListener("touchmove", (e) => {
     if (isDragging && selectedElement && followMode) {
