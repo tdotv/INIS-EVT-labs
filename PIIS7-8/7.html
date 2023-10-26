@@ -30,6 +30,7 @@
     <button id="clearCanvas">Очистить холст</button>
 
     <script>
+        const circle = document.createElementNS("http://www.w3.org/2000/svg", "circle");
         const svg = document.getElementById('svg');
         const shapeSelector = document.getElementsByName('shape');
         const clearButton = document.getElementById('clearCanvas');
@@ -68,7 +69,7 @@
             startX = e.clientX - svg.getBoundingClientRect().left;
             startY = e.clientY - svg.getBoundingClientRect().top;
             if (currentShape === 'circle'){ 
-                const circle = document.createElementNS("http://www.w3.org/2000/svg", "circle");
+                
                  svg.appendChild(circle);
             }
         });
