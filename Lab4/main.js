@@ -1,5 +1,3 @@
-
-
 const cardContainer = document.getElementById("card-container");
 
 shirts.forEach(el =>
@@ -9,10 +7,7 @@ shirts.forEach(el =>
     }
 );
 
-document.getElementById("close-quick-view-btn").addEventListener("click",
-e => closeQuickView(e));
-
-
+document.getElementById("close-quick-view-btn").addEventListener("click", e => closeQuickView(e));
 
 function generateCard(shirt)
 {
@@ -43,8 +38,6 @@ function generateCard(shirt)
     quickViewBtn.innerText = "Quick View";
     quickViewBtn.addEventListener("click", quickView);
     seePageBtn.innerText = "See Page";
-
-
 
     cardTitle.innerText = shirt.name;
 
@@ -114,7 +107,7 @@ function fillImgBlock(shirt, shirtView, imageBlock, imgClass)
     }
     catch(ex)
     {
-        image.setAttribute("src", "default_images/default.png");
+        image.setAttribute("src", "shirt_images/default-m-front.png");
         let noImg = document.createElement("div");
         noImg.innerText = "Missing image";
         noImg.classList.add("card-no-img-text");
