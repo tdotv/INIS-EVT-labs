@@ -4,41 +4,7 @@ let isDragging = false;
 let followMode = false;
 
 const targets = document.querySelectorAll(".target");
-
-targets.forEach((target) => {
-    target.addEventListener("mousedown", (e) => {
-        if (e.button === 0) {
-            if (selectedElement === null) {
-                selectedElement = target;
-                originalPosition = {
-                    top: parseInt(target.style.top) || 0,
-                    left: parseInt(target.style.left) || 0,
-                    backgroundColor: target.style.backgroundColor,
-                };
-                isDragging = true;
-                target.style.zIndex = 1;
-            }
-        }
-    });
-
-    target.addEventListener("dblclick", () => {
-        if (selectedElement === null) {
-            selectedElement = target;
-            originalPosition = {
-                top: parseInt(target.style.top) || 0,
-                left: parseInt(target.style.left) || 0,
-                backgroundColor: target.style.backgroundColor,
-            };
-            isDragging = true;
-            target.style.zIndex = 1;
-            target.style.backgroundColor = "blue";
-        } else {
-            selectedElement.style.zIndex = 0;
-            selectedElement = null;
-            isDragging = false;
-            target.style.backgroundColor = originalPosition.backgroundColor;
-        }
-    });
+for (target in targets){
 
     target.addEventListener("touchstart", (e) => {
         if (!followMode) {
@@ -52,8 +18,7 @@ targets.forEach((target) => {
             isDragging = true;
             target.style.zIndex = 1;
         }
-    });
-});
+    } )};
 
 document.addEventListener("touchmove", (e) => {
     if (isDragging && selectedElement && followMode) {
