@@ -49,6 +49,10 @@ h1, h3{
     margin-top: 3px;
 }
 
+span {
+    font-weight: 500;
+}
+
 /* Картинки */
 img {
     margin: 10px 30px 10px 0px;
