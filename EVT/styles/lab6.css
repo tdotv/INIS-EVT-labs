@@ -70,7 +70,7 @@
   }
   
   a:hover::after,
-  a:focus::after { /* click and hover */
+  a:focus::after { /* click and hover  */
     opacity: 1;
     transform: scale(1);
   }
@@ -79,10 +79,15 @@
     height: 700px;
     border-bottom: solid 1px #000;
   }
-  
-  img {
-    position: relative;
-    animation: ball-animation 6s infinite;
+
+  #ball {
+    width: 120px;
+    height: 120px;
+    background-color: blue;
+    border-radius: 50%;
+    position: absolute;
+    top: 0;
+    animation: bounce 4s infinite;
   }
   
   @keyframes shake {
@@ -102,7 +107,8 @@
         transform: translate(0);
     }
   }
-  @keyframes ball-animation {
+  
+  @keyframes bounce {
     0% {
       top: 0px;
     }
